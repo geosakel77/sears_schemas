@@ -1,0 +1,18 @@
+{
+  "SEARS": {
+    "flag": "on",
+    "Risk": {
+      "threshold": 0.8,
+      "value": 0.81,
+      "category": "alert"
+    },
+    "Client": {
+      "username": "tsinik",
+      "IPAddress": "123.234.12.23"
+    },
+    "other": {
+      "textInfo": "some text here",
+      "numericInfo": 36
+    }
+  }
+}

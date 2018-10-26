@@ -1,0 +1,136 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "SEARS"
+  ],
+  "properties": {
+    "SEARS": {
+      "$id": "#/properties/SEARS",
+      "type": "object",
+      "title": "The Sears Schema",
+      "required": [
+        "flag",
+        "Risk",
+        "Client",
+        "other"
+      ],
+      "properties": {
+        "flag": {
+          "$id": "#/properties/SEARS/properties/flag",
+          "type": "string",
+          "title": "The Flag Schema",
+          "default": "",
+          "examples": [
+            "on"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "Risk": {
+          "$id": "#/properties/SEARS/properties/Risk",
+          "type": "object",
+          "title": "The Risk Schema",
+          "required": [
+            "threshold",
+            "value",
+            "category"
+          ],
+          "properties": {
+            "threshold": {
+              "$id": "#/properties/SEARS/properties/Risk/properties/threshold",
+              "type": "number",
+              "title": "The Threshold Schema",
+              "default": 0.0,
+              "examples": [
+                0.8
+              ]
+            },
+            "value": {
+              "$id": "#/properties/SEARS/properties/Risk/properties/value",
+              "type": "number",
+              "title": "The Value Schema",
+              "default": 0.0,
+              "examples": [
+                0.81
+              ]
+            },
+            "category": {
+              "$id": "#/properties/SEARS/properties/Risk/properties/category",
+              "type": "string",
+              "title": "The Category Schema",
+              "default": "",
+              "examples": [
+                "alert"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "Client": {
+          "$id": "#/properties/SEARS/properties/Client",
+          "type": "object",
+          "title": "The Client Schema",
+          "required": [
+            "username",
+            "IPAddress"
+          ],
+          "properties": {
+            "username": {
+              "$id": "#/properties/SEARS/properties/Client/properties/username",
+              "type": "string",
+              "title": "The Username Schema",
+              "default": "",
+              "examples": [
+                "tsinik"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "IPAddress": {
+              "$id": "#/properties/SEARS/properties/Client/properties/IPAddress",
+              "type": "string",
+              "title": "The Ipaddress Schema",
+              "default": "",
+              "examples": [
+                "123.234.12.23"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "other": {
+          "$id": "#/properties/SEARS/properties/other",
+          "type": "object",
+          "title": "The Other Schema",
+          "required": [
+            "textInfo",
+            "numericInfo"
+          ],
+          "properties": {
+            "textInfo": {
+              "$id": "#/properties/SEARS/properties/other/properties/textInfo",
+              "type": "string",
+              "title": "The Textinfo Schema",
+              "default": "",
+              "examples": [
+                "some text here"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "numericInfo": {
+              "$id": "#/properties/SEARS/properties/other/properties/numericInfo",
+              "type": "integer",
+              "title": "The Numericinfo Schema",
+              "default": 0,
+              "examples": [
+                36
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
