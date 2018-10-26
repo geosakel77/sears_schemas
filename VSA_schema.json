@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "required": [],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "Cyber attack information": {
+      "type": "string"
+    },
+    "Network interface": {
+      "type": "string"
+    },
+    "Service type": {
+      "type": "string"
+    },
+    "Length": {
+      "type": "number"
+    },
+    "Sequence Number": {
+      "type": "number"
+    },
+    "Source": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "IP": {
+          "type": "string"
+        },
+        "port": {
+          "type": "number"
+        }
+      }
+    },
+    "Destination": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "IP": {
+          "type": "string"
+        },
+        "port": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
