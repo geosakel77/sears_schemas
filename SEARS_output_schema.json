@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "required": ["calulated_risk","source"],
+  "title":"SEARS Output",
+  "description":"This is the schema that SEARS uses to interconnect with other services of FORTIKA",
+  "properties": {
+    "uid": {
+      "type": "string"
+    },
+    "calulated_risk": {
+      "type": "number"
+    },
+    "source": {
+      "type": "object",
+      "required": ["IP"],
+      "properties": {
+        "IP": {
+          "type": "string"
+        },
+        "port": {
+          "type": "number"
+        }
+      }
+    }
+    }
+ }
