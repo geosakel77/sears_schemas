@@ -9,17 +9,38 @@
       "SEARS":{
           "$id": "#/properties/SEARS",
           "type": "object",
-          "title": "The Sears Schema",
-          "description":"This the schema followed by the micorservices that implement SEARS service.",
+          "title": "The SEARS Schema",
+          "description":"This is the schema followed by the micorservices that implement SEARS service.",
           "maxProperties":1,
+          "minProperties":1,
           "properties":{
            "SEARS_Client":{
-               
+                    "$id": "#/properties/SEARS/properties/SEARS_Client",
+                    "type": "object",
+                    "title": "The SEARS Client Schema",
+                    "description":"This is the schema followed by the micorservices that implement SEARS Client.",
+                    "maxProperties":1,
+                    "minProperties":1,
+                    "properties":{}
            },
            "SEARS_Fog":{
+                    "$id": "#/properties/SEARS/properties/SEARS_Fog",
+                    "type": "object",
+                    "title": "The SEARS Fog Schema",
+                    "description":"This is the schema followed by the micorservices that implement SEARS Fog.",
+                    "maxProperties":1,
+                    "minProperties":1,
+                    "properties":{}
                
            },
            "SEARS_Cloud":{
+                    "$id": "#/properties/SEARS/properties/SEARS_Cloud",
+                    "type": "object",
+                    "title": "The SEARS Cloud Schema",
+                    "description":"This is the schema followed by the micorservices that implement SEARS Cloud.",
+                    "maxProperties":1,
+                    "minProperties":1,
+                    "properties":{}
                
            }
           }
