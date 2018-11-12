@@ -1,8 +1,28 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/product.schema.json",
-  "title": "Product",
-  "description": "A product in the catalog",
-  "type": "object"
-  
+  "$id": "https://github.com/geosakel77/sears_schemas/blob/master/sears_schema.json",
+  "title": "The Root Schema of SEARS Project",
+  "description": "This the root schema of SEARS project.",
+  "type": "object",
+  "required":["SEARS"],
+  "properties":{
+      "SEARS":{
+          "$id": "#/properties/SEARS",
+          "type": "object",
+          "title": "The Sears Schema",
+          "description":"This the schema followed by the micorservices that implement SEARS service.",
+          "maxProperties":1,
+          "properties":{
+           "SEARS_Client":{
+               
+           },
+           "SEARS_Fog":{
+               
+           },
+           "SEARS_Cloud":{
+               
+           }
+          }
+      }
+  }
 }
