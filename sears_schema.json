@@ -28,32 +28,100 @@
                                     "title": "Client login microservice output",
                                     "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
                                     "properties":{
-                                        
-                                    }
+                                            "firstname":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login/properties/firstname",
+                                                "type": "string"            
+                                            }, 
+                                            "lastname":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login/properties/lastname",
+                                                "type": "string"
+                                            }, 
+                                            "address":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login/properties/address",
+                                                "type": "string"
+                                            },
+                                            "mail":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login/properties/mail",
+                                                "type": "string",
+                                                "format":"email"
+                                            },
+                                            "gender":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login/properties/gender",
+                                                "type": "string",
+                                                "enum":["M","F"]
+                                            }
+                                    },
+                                    "required":["firstname","lastname","address","mail","gender"]
+                                    
                                 },
                                 "captured_message":{
                                     "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message",
                                     "type": "object",
-                                    "title": "Client login microservice output",
-                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "title": "Client chat capture  microservice output",
+                                    "description":"This is the schema for chat capture micorservice which is implemented to SEARS Client.",
                                     "properties":{
-                                        
-                                    }
+                                            "uid_friend":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message/properties/uid_friend",
+                                                "type":"string"
+                                            },
+                                            "uid_attacker":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message/properties/uid_attacker",
+                                                "type":"string"
+                                            },
+                                            "friend_message":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message/properties/friend_message",
+                                                "type":["null","string"]
+                                            },
+                                            "attacker_message":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message/properties/attacker_message",
+                                                "type":["null","string"]
+                                            },
+                                            "timestamp":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message/properties/timestamp",
+                                                "type":"number"
+                                            }
+                                    },
+                                    "minProperties":4,
+                                    "maxProperties":5,
+                                    "required":["uid_friend","uid_attacker","timestamp"]
                                 },
                                 "captured_chunk":{
                                     "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk",
                                     "type": "object",
-                                    "title": "Client login microservice output",
-                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "title": "Client chat separation microservice output",
+                                    "description":"This is the schema for chat separation micorservice which is implemented to SEARS Client.",
                                     "properties":{
-                                        
-                                    }
+                                            "uid_friend":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk/properties/uid_friend",
+                                                "type":"string"
+                                            },
+                                            "uid_attacker":{
+                                                "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk/properties/uid_attacker",
+                                                "type":"string"
+                                            },
+                                            "friend_chunk":{
+                                                 "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk/properties/friend_chunk",
+                                                 "type":["string","null"]
+                                            },
+                                            "attacker_chunk":{
+                                                 "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk/properties/attacker_chunk",
+                                                 "type":["string","null"]
+                                            },
+                                            "exposure_time":{
+                                                 "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk/properties/exposure_time",
+                                                 "type":"number"
+                                            }
+                                    },
+                                    "minProperties":4,
+                                    "maxProperties":5,
+                                    "required":["exposure_time","uid_friend","uid_attacker"]
                                 },
                                 "warning":{
                                     "$id": "#/properties/SEARS/properties/SEARS_Client/properties/warning",
                                     "type": "object",
-                                    "title": "Client login microservice output",
+                                    "title": "Client warning microservice output",
                                     "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "$comment":"we must define, if this should be the output of client manager service which consumed by the warning microservice",
                                     "properties":{
                                         
                                     }
@@ -68,7 +136,46 @@
                          "maxProperties":1,
                          "minProperties":1,
                          "properties":{
-                             
+                                "chunk":{
+                                       "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk",
+                                       "type": "object",
+                                       "title": "Fog prerpocessing microservice output",
+                                       "description":"This is the schema for preprocessing micorservice which is implemented to SEARS Fog.",
+                                       "properties":{
+                                                "friendly_chunk":{
+                                                        "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk",
+                                                        "type": "object",
+                                                        "properties":{
+                                                                "uid_friend":{
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/uid_friend",
+                                                                    "type":"string"
+                                                                },
+                                                                "friend_msg":{
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/friend_msg",
+                                                                    "type":"string"
+                                                                } 
+                                                        },
+                                                        "required":["uid_friend","friend_msg"]
+                                                },
+                                                "attacker_chunk":{
+                                                        "$id": "#/properties/SEARS/properties/SEARS_Fog/properties//properties/attacker_chunk",
+                                                        "type": "object",
+                                                        "properties":{
+                                                                "uid_attacker":{
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/uid_attacker",
+                                                                    "type":"string"
+                                                                },
+                                                                "attacker_msg":{
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/attacker_msg",
+                                                                    "type":"string"
+                                                                }    
+                                                        },
+                                                        "required":["uid_attacker","attacker_msg"]
+                                                }
+                                       },
+                                       "maxProperties":1
+                                 },
+                                 "":{}
                          }
                 },
                 "SEARS_Cloud":{
