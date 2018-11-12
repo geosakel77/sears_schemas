@@ -14,35 +14,74 @@
           "maxProperties":1,
           "minProperties":1,
           "properties":{
-           "SEARS_Client":{
-                    "$id": "#/properties/SEARS/properties/SEARS_Client",
-                    "type": "object",
-                    "title": "The SEARS Client Schema",
-                    "description":"This is the schema followed by the micorservices that implement SEARS Client.",
-                    "maxProperties":1,
-                    "minProperties":1,
-                    "properties":{}
-           },
-           "SEARS_Fog":{
-                    "$id": "#/properties/SEARS/properties/SEARS_Fog",
-                    "type": "object",
-                    "title": "The SEARS Fog Schema",
-                    "description":"This is the schema followed by the micorservices that implement SEARS Fog.",
-                    "maxProperties":1,
-                    "minProperties":1,
-                    "properties":{}
-               
-           },
-           "SEARS_Cloud":{
-                    "$id": "#/properties/SEARS/properties/SEARS_Cloud",
-                    "type": "object",
-                    "title": "The SEARS Cloud Schema",
-                    "description":"This is the schema followed by the micorservices that implement SEARS Cloud.",
-                    "maxProperties":1,
-                    "minProperties":1,
-                    "properties":{}
-               
-           }
+                "SEARS_Client":{
+                         "$id": "#/properties/SEARS/properties/SEARS_Client",
+                         "type": "object",
+                         "title": "The SEARS Client Schema",
+                         "description":"This is the schema followed by the micorservices that implement SEARS Client.",
+                         "maxProperties":1,
+                         "minProperties":1,
+                         "properties":{
+                                "login":{
+                                    "$id": "#/properties/SEARS/properties/SEARS_Client/properties/login",
+                                    "type": "object",
+                                    "title": "Client login microservice output",
+                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "properties":{
+                                        
+                                    }
+                                },
+                                "captured_message":{
+                                    "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_message",
+                                    "type": "object",
+                                    "title": "Client login microservice output",
+                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "properties":{
+                                        
+                                    }
+                                },
+                                "captured_chunk":{
+                                    "$id": "#/properties/SEARS/properties/SEARS_Client/properties/captured_chunk",
+                                    "type": "object",
+                                    "title": "Client login microservice output",
+                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "properties":{
+                                        
+                                    }
+                                },
+                                "warning":{
+                                    "$id": "#/properties/SEARS/properties/SEARS_Client/properties/warning",
+                                    "type": "object",
+                                    "title": "Client login microservice output",
+                                    "description":"This is the schema for login micorservice which is implemented to SEARS Client.",
+                                    "properties":{
+                                        
+                                    }
+                                }
+                         }
+                },
+                "SEARS_Fog":{
+                         "$id": "#/properties/SEARS/properties/SEARS_Fog",
+                         "type": "object",
+                         "title": "The SEARS Fog Schema",
+                         "description":"This is the schema followed by the micorservices that implement SEARS Fog.",
+                         "maxProperties":1,
+                         "minProperties":1,
+                         "properties":{
+                             
+                         }
+                },
+                "SEARS_Cloud":{
+                         "$id": "#/properties/SEARS/properties/SEARS_Cloud",
+                         "type": "object",
+                         "title": "The SEARS Cloud Schema",
+                         "description":"This is the schema followed by the micorservices that implement SEARS Cloud.",
+                         "maxProperties":1,
+                         "minProperties":1,
+                         "properties":{
+                             
+                         }
+                }
           }
       }
   }
