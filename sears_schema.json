@@ -162,11 +162,11 @@
                                                         "type": "object",
                                                         "properties":{
                                                                 "uid_attacker":{
-                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/uid_attacker",
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/attacker_chunk/properties/uid_attacker",
                                                                     "type":"string"
                                                                 },
                                                                 "attacker_msg":{
-                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/friendly_chunk/properties/attacker_msg",
+                                                                    "$id": "#/properties/SEARS/properties/SEARS_Fog/properties/chunk/properties/attacker_chunk/properties/attacker_msg",
                                                                     "type":"string"
                                                                 }    
                                                         },
